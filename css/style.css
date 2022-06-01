@@ -1,3 +1,5 @@
+/* GENERICS */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,9 +15,7 @@ body {
 }
 
 
-
-
-
+/* UTILITY */
 .wrapper {
     display: flex;
     height: calc(100vh - 80px);
@@ -23,6 +23,66 @@ body {
 
 }
 
+:root {
+    /* header */
+    --upgrade-button-txt-color: #ffffff;
+
+
+    /* MAIN CONTENT */
+    --mcontent-bg: #141922;
+    --section-titles-txt-color: #ffffff;
+    --section-subtitle-txt-color: #7a7d81;
+    --item-titles-txt-color: #ffffff;
+    --item-subtitle-txt-color: #7a7d81;
+
+    /* SECTION SELECTOR */
+    --selector-txt-color: #8e9094;
+    --section-selector-active-color: #caff31;
+
+    /* SIDEBAR */
+    --sidebar-bg-color: #000000;
+
+    /* FOOTER */
+    --footer-bg-color: #282828;
+
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.xs-screen-hidden {}
+
+
+
+
+/* SIDEBAR  */
+
+.sidebar {
+    height: 100%;
+    width: 300px;
+    background-color: var(--sidebar-bg-color);
+    z-index: 1;
+
+
+}
+
+
+
+/* MAIN CONTAINER */
+
+.main-container {
+    width: calc(100vw - 300px);
+    overflow-y: scroll;
+    background-color: var(--mcontent-bg);
+    padding-top: 80px;
+}
+
+
+
+/* HEADER */
 
 header {
 
@@ -34,22 +94,52 @@ header {
     background-color: #00000033;
 }
 
+
+
+/* MAIN CONTENT */
+.main-content {
+    height: 100%;
+    background-color: var(--mcontent-bg);
+}
+
+.section-selector {
+    /* ELIMINAMI */
+    height: 60px;
+    background-color: #caff31;
+}
+
+/* MAIN SECTIONS */
+/* ELIMINAMI */
+section {
+
+    background-color: red;
+    margin-bottom: 30px;
+}
+
+section .row {
+    flex-wrap: wrap;
+
+}
+
+section .col {
+    width: calc(100% / 6);
+    padding: 5px;
+    /* ELIMINAMI */
+    background-color: aqua;
+    border: 1px solid green;
+    flex-shrink: 0;
+
+}
+
+section .item {
+    /* ELIMINAMI */
+    width: 200px;
+    height: 200px;
+    background-color: #000000;
+}
+
+/* FOOTER */
 footer {
     height: 80px;
-    background-color:
-        rgba(0, 128, 0, 0.496);
-}
-
-.sidebar {
-    height: 100%;
-    width: 300px;
-    background-color: aqua;
-    z-index: 1;
-
-
-}
-
-.main-cont {
-    width: calc(100vw - 300px);
-    overflow-y: scroll;
+    background-color: var(--footer-bg-color);
 }
