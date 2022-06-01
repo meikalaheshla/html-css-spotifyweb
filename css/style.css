@@ -166,3 +166,14 @@ footer {
     height: 80px;
     background-color: var(--footer-bg-color);
 }
+
+footer .player-bar {
+    justify-content: space-between;
+}
+
+/* ELIMINAMI */
+footer .col {
+    width: 30%;
+    background-color: coral;
+    height: 80px;
+}
