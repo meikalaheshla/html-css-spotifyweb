@@ -17,7 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;1,100&display=swap"
         rel="stylesheet">
-
+    <!-- TAB STYLE -->
+    <link rel="icon" href="img/favicon.ico">
     <title>Spotify</title>
 </head>
 
@@ -26,15 +27,76 @@
         <nav class="sidebar">
             <div class="side-top-menu">
 
-                <figure><img src="" alt="logo"></figure>
-                <nav class="side-menu"></nav>
-                <div class="playlist-menu"></div>
+                <figure class="logo"><img class=" xs-screen-hidden" src="img/logo.svg" alt="logo"></figure>
+                <nav class="side-menu margin-bot-20">
+                    <ul>
+                        <li class="top-menu-item">
+                            <figure id="home" class="top-menu-icon"><img src="img/home.svg" alt=""></figure>
+                            <div class="top-menu-item-txt xs-screen-hidden">
+                                <span>Home</span>
+                            </div>
+
+                        </li>
+                        <li class="top-menu-item">
+                            <figure id="cerca" class="top-menu-icon"><img src="img/search.svg" alt="search"></figure>
+                            <div class="top-menu-item-txt xs-screen-hidden">
+                                <span>Cerca</span>
+                            </div>
+
+                        </li>
+                        <li class="top-menu-item">
+                            <figure id="libreria" class="top-menu-icon"><img src="img/libreria.svg" alt=""></figure>
+                            <div class="top-menu-item-txt xs-screen-hidden">
+                                <span>La tua libreria</span>
+                            </div>
+
+                        </li>
+                    </ul>
+                </nav>
+                <div class="playlist-menu xs-screen-hidden">
+                    <h3 class="margin-bot-20">PLAYLIST</h3>
+                    <ul>
+                        <li>
+                            <div class="new-playlist margin-bot-20">
+                                <figure>
+
+                                    <i class="fa-solid fa-square-plus fa-3x"></i>
+                                </figure>
+                                <span><b> Crea Playlist</b> </span>
+                            </div>
+                        </li>
+
+
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                        <li class="playlist-item">
+                            <span>Nome Playlist</span>
+                        </li>
+                    </ul>
+
+                </div>
             </div>
             <div class="side-bottom-menu"></div>
         </nav>
         <div class="main-container">
             <header>
-                <a class="upgrade-button" href=""></a>
+                <a class="upgrade-button" href="">EFFETTUA L'UPGRADE</a>
             </header>
             <main class="main-content">
                 <nav class="section-selector">

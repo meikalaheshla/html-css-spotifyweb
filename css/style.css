@@ -14,14 +14,16 @@ body {
     overflow-y: hidden;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 /* UTILITY */
-.wrapper {
-    display: flex;
-    height: calc(100vh - 80px);
-    width: 100%;
-
-}
 
 :root {
     /* header */
@@ -36,15 +38,25 @@ body {
     --item-subtitle-txt-color: #7a7d81;
 
     /* SECTION SELECTOR */
-    --selector-txt-color: #8e9094;
+    --section-selector-txt-color: #8e9094;
+    --section-selector-hover-color: #ffffff;
     --section-selector-active-color: #caff31;
 
     /* SIDEBAR */
     --sidebar-bg-color: #000000;
-
+    --sidebar-txt-color: #7a7d81;
+    --sidebar-txt-hover-color: #ffffff;
+    --sidebar-hover-border-color: #baff32;
     /* FOOTER */
     --footer-bg-color: #282828;
 
+
+}
+
+.wrapper {
+    display: flex;
+    height: calc(100vh - 80px);
+    width: 100%;
 
 }
 
@@ -56,20 +68,178 @@ body {
 .xs-screen-hidden {}
 
 
+/* SPACING UTILITY */
+.margin-bot-30 {
+    margin-bottom: 30px;
+}
+
+.margin-bot-20 {
+    margin-bottom: 20px;
+}
 
 
-/* SIDEBAR  */
+/* MAIN CONTAINER */
+
+.main-container {
+    flex-grow: 1;
+    background-color: var(--mcontent-bg);
+    overflow-y: auto;
+
+}
+
+
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    height: 80px;
+    position: sticky;
+    top: 0;
+
+    background-color: #00000033;
+}
+
+
+
+header .upgrade-button {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--upgrade-button-txt-color);
+
+    border: 1px solid var(--upgrade-button-txt-color);
+    border-radius: 30px;
+
+    padding: 10px 30px;
+    margin-right: 5px;
+}
+
+
+/* HEADER HOVER EFFECTS */
+
+
+header .upgrade-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* SIDEBAR */
 
 .sidebar {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    width: 200px;
+    width: 250px;
+    flex-shrink: 0;
     background-color: var(--sidebar-bg-color);
     z-index: 1;
+    color: var(--sidebar-txt-color);
 
 }
+
+
+
+/* SIDEBAR LOGO */
+
+
+.sidebar .logo {
+    width: 70%;
+    height: 80px;
+    line-height: 80px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+
+
+/* SIDE MENU */
+
+
+
+.side-menu .top-menu-item {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+
+.side-menu .top-menu-icon {
+
+    height: 35px;
+    width: 20%;
+}
+
+.side-menu .top-menu-icon img {
+    height: 80%
+}
+
+.side-menu .top-menu-item-txt {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* TOP SIDE MENU HOVER EFFECTS */
+
+.side-menu .top-menu-item:hover {
+    color: var(--sidebar-txt-hover-color);
+    border-left: 3px solid var(--sidebar-hover-border-color);
+
+}
+
+/* PLAYLIST MENU */
+.playlist-menu {
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.playlist-menu h3 {
+    font-size: 0.9rem;
+    color: var(--item-titles-txt-color);
+
+}
+
+.playlist-menu .new-playlist {
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
+.playlist-menu .new-playlist figure {
+    margin-right: 10px;
+}
+
+
+.playlist-menu a {
+    color: var(--sidebar-txt-color);
+}
+
+.playlist-menu .playlist-item {
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/*  PLAYLIST HOVER EFFECT */
+.playlist-menu .new-playlist:hover {
+    color: var(--sidebar-txt-hover-color);
+}
+
+.playlist-menu .playlist-item:hover {
+    color: var(--sidebar-txt-hover-color);
+}
+
+
+
 
 .sidebar .side-bottom-menu {
     /* ELIMINAMI */
@@ -78,55 +248,11 @@ body {
 
 }
 
-
-
-/* MAIN CONTAINER */
-
-.main-container {
-    width: calc(100vw - 200px);
-    overflow-y: scroll;
-    background-color: var(--mcontent-bg);
-    padding-top: 80px;
-}
-
-
-
-/* HEADER */
-
-header {
-
-    height: 80px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: #00000033;
-}
-
-/* SIDEBAR */
-/* ELIMINAMI */
-.sidebar figure {
-    height: 80px;
-    background-color: antiquewhite;
-}
-
-.side-menu {
-    height: 200px;
-    background-color: #7a7d81;
-
-}
-
-.playlist-menu {
-    height: 400px;
-    background-color: blueviolet;
-}
-
-
-
 /* MAIN CONTENT */
 .main-content {
     height: 100%;
     background-color: var(--mcontent-bg);
+    overflow-y: scroll;
 }
 
 .section-selector {
