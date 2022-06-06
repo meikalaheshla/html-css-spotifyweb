@@ -47,6 +47,7 @@ a {
     --sidebar-txt-color: #7a7d81;
     --sidebar-txt-hover-color: #ffffff;
     --sidebar-hover-border-color: #baff32;
+    --profile-name-color: #ffffff;
     /* FOOTER */
     --footer-bg-color: #282828;
 
@@ -239,13 +240,64 @@ header .upgrade-button:hover {
 }
 
 
+/* SIDE-BOTTOM_MENU */
+.side-bottom-menu {
+    padding-left: 20px;
+}
+
+.side-bottom-menu hr {
+    margin-right: 20px;
+}
+
+/* DOWNLOAD APP  */
+
+.side-bottom-menu .installation-link {
+    color: var(--sidebar-txt-color);
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+
+.side-bottom-menu #dowload-img {
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* SIDE BOTTOM MENU HOVER EFFECTS */
+.side-bottom-menu .installation-link:hover {
+    color: var(--sidebar-txt-hover-color);
+}
 
 
-.sidebar .side-bottom-menu {
-    /* ELIMINAMI */
-    height: 50px;
-    background-color: brown;
 
+
+
+/* PROFILE  */
+
+.side-bottom-menu .profile {
+    display: flex;
+    align-items: center;
+    color: var(--profile-name-color);
+}
+
+.side-bottom-menu .profile-frame {
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #7a7d81;
+    overflow: hidden;
+}
+
+.side-bottom-menu #profile-img {
+
+    object-fit: cover;
 }
 
 /* MAIN CONTENT */
