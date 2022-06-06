@@ -12,6 +12,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow-y: hidden;
+    color: #ffffff;
 }
 
 ul {
@@ -21,6 +22,11 @@ ul {
 a {
     text-decoration: none;
     color: #ffffff;
+}
+
+section {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* UTILITY */
@@ -309,18 +315,19 @@ header .upgrade-button:hover {
 
 /* SECTION SELECTOR BAR  */
 .section-selector {
-    height: 60px;
+    margin
+    /* ELIMINAMI */
+    /* height: 60px; */
 }
 
 .section-selector .section-list {
-    height: 100%;
+    height: 60px;
     width: 600px;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
 
 .section-selector a {
     font-weight: bold;
@@ -334,32 +341,57 @@ header .upgrade-button:hover {
     color: var(--section-selector-active-color)
 }
 
+/* SECTION SELECTOR HOVER EFFECT */
+
+.section-selector .section-list-item a:hover {
+    color: var(--section-selector-hover-color);
+}
+
 
 
 /* MAIN SECTIONS */
-/* ELIMINAMI */
-section {
 
-    background-color: red;
-    margin-bottom: 30px;
-}
+/* GENERIC SECTIONS */
+
 
 section .col {
-    width: calc(100% / 6);
+    width: calc(100%/6);
     padding: 5px;
-    /* ELIMINAMI */
-    background-color: aqua;
-    border: 1px solid green;
-    flex-shrink: 0;
 
 }
 
 section .item {
-    /* ELIMINAMI */
-    width: 200px;
-    height: 200px;
-    background-color: #000000;
     margin: 0 auto;
+    flex-shrink: 0.5;
+}
+
+/* ITEMS DETAILS */
+
+section .album-img-frame {
+    width: 100%;
+
+
+}
+
+section .item .album-img {
+    width: 100%;
+}
+
+/* ALBUM TEXT */
+section .album-txt {
+    text-align: center;
+}
+
+section .album-txt .album-title {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+section .album-txt span {
+    color: var(--item-subtitle-txt-color);
+    font-weight: bold;
+    font-size: 0.6rem;
+
 }
 
 /* FOOTER */
