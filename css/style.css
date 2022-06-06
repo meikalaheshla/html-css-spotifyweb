@@ -307,11 +307,34 @@ header .upgrade-button:hover {
     overflow-y: scroll;
 }
 
+/* SECTION SELECTOR BAR  */
 .section-selector {
-    /* ELIMINAMI */
     height: 60px;
-    background-color: #caff31;
 }
+
+.section-selector .section-list {
+    height: 100%;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-selector a {
+    font-weight: bold;
+    font-size: 0.7rem;
+    color: var(--section-selector-txt-color);
+}
+
+.section-selector .selected-section {
+    width: 30%;
+    margin: auto;
+    color: var(--section-selector-active-color)
+}
+
+
 
 /* MAIN SECTIONS */
 /* ELIMINAMI */
