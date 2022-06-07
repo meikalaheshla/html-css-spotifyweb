@@ -58,13 +58,16 @@ section {
     --footer-bg-color: #282828;
     --leftbar-btn-color: #8e9094;
     --leftbar-btn-hover-color: #baff32;
+
     --time-bar-color: #8e9094;
     --time-played-bar-color: #ffffff;
     --time-played-bar-color-hover: #baff32;
 
-
-
-
+    --max-volume-bar-color: #8e9094;
+    --actual-volume-bar-color: #ffffff;
+    --right-bar-buttons-color: #ffffff;
+    --actual-volume-bar-hover-color: #baff32;
+    --actual-volume-bar-hover-color: #baff32;
 }
 
 .wrapper {
@@ -557,6 +560,7 @@ footer .middle-player-bar .player-commands {
 }
 
 footer .middle-player-bar .player-commands button {
+    cursor: pointer;
     font-size: 20px;
     background-color: transparent;
     border: none;
@@ -575,7 +579,8 @@ footer .middle-player-bar .current-playing-time {
     font-size: 0.8rem;
 }
 
-footer .middle-player-bar .current-playing-time #time-bar {
+footer .middle-player-bar #time-bar {
+    cursor: pointer;
     border-radius: 3px;
     margin-left: 10px;
     margin-right: 10px;
@@ -587,11 +592,62 @@ footer .middle-player-bar .current-playing-time #time-bar {
 }
 
 footer .middle-player-bar .current-playing-time #time-played-bar {
-    height: 3px;
+    height: 100%;
     border-radius: 3px;
     background-color: var(--time-played-bar-color);
     width: 20%;
 }
 
 /* RIGHT SIDE FOOTER */
-footer .right-player-bar {}
+footer .right-player-bar button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--right-bar-buttons-color);
+
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+footer .right-player-bar .right-commands {
+    padding-right: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+footer .right-player-bar #max-volume {
+    cursor: pointer;
+    height: 3px;
+    width: 90px;
+    border-radius: 3px;
+    background-color: var(--max-volume-bar-color);
+    margin-left: 5px;
+}
+
+footer .right-player-bar #actual-volume {
+    border-radius: 3px;
+    width: 30%;
+    height: 100%;
+    background-color: var(--actual-volume-bar-color);
+}
+
+/* FOOTER HOVER EFFECTS */
+footer .left-player-bar a:hover {
+    color: var(--leftbar-btn-hover-color);
+
+}
+
+footer .middle-player-bar button:hover {
+    transform: scale(1.05);
+}
+
+footer .middle-player-bar .current-playing-time:hover #time-played-bar {
+    background-color: var(--time-played-bar-color-hover);
+}
+
+footer .right-player-bar #max-volume:hover #actual-volume {
+    background-color: var(--actual-volume-bar-hover-color);
+}
