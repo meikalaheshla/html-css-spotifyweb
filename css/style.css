@@ -95,14 +95,6 @@ section {
 }
 
 
-/* MAIN CONTAINER */
-
-/* .main-container {
-    flex-grow: 1;
-    background-color: var(--mcontent-bg);
-    overflow-y: auto;
-
-} */
 
 
 
@@ -457,7 +449,7 @@ header .upgrade-button:hover {
 
 /* SPECIAL SECTION ITEM DETAILS */
 
-/* .main-container #most-popular-artist .album-img-frame {
+.main-container #most-popular-artist .album-img-frame {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -468,7 +460,7 @@ header .upgrade-button:hover {
     width: 150px;
     height: 150px;
     object-fit: cover;
-} */
+}
 
 
 
@@ -651,3 +643,14 @@ footer .middle-player-bar .current-playing-time:hover #time-played-bar {
 footer .right-player-bar #max-volume:hover #actual-volume {
     background-color: var(--actual-volume-bar-hover-color);
 }
+
+
+
+
+
+/* RESPONSIVNESS */
+@media screen and (max-width:992px) {}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:576px) {}
