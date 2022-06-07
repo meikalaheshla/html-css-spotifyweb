@@ -738,3 +738,33 @@ footer .right-player-bar #max-volume:hover #actual-volume {
         height: 100%;
     }
 }
+
+@media screen and (max-width:500px) {
+
+    /* MAIN */
+    .wrapper {
+        height: calc(100vh - 200px);
+    }
+
+    /* SECTIONS */
+    .main-container section .col {
+        width: 100%;
+    }
+
+
+    /* FOOTER */
+    footer {
+        height: 200px;
+    }
+
+    footer .player-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .left-player-bar {}
+
+    footer .middle-player-bar {
+        width: 70%;
+    }
+}
