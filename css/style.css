@@ -491,7 +491,7 @@ footer .col {
 /* LEFT SIDE FOOTER */
 
 footer .left-player-bar {
-    /* background-color: #baff32; */
+    height: 100%;
     display: flex;
     justify-content: flex-start;
 
@@ -521,8 +521,8 @@ footer .left-player-bar .add-library-btn {
 
 footer .left-player-bar .album-miniature-img {
     margin-right: 10px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 
 }
 
@@ -542,7 +542,9 @@ footer .left-player-bar img {
 }
 
 /* MIDDLE FOOTER */
-footer .middle-player-bar {}
+footer .middle-player-bar {
+    height: 100%;
+}
 
 footer .middle-player-bar .player-commands {
     margin: auto;
@@ -685,9 +687,14 @@ footer .right-player-bar #max-volume:hover #actual-volume {
     footer .left-player-bar .current-playing-utility {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
+        align-items: center;
+        line-height: normal;
     }
 
+    footer .left-player-bar .add-library-btn {
+        margin-left: 0px;
+    }
 
 }
 
