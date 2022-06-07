@@ -270,9 +270,46 @@
     </div>
     <footer>
         <div class="row player-bar">
-            <div class="col left-player-bar"></div>
-            <div class="col middle-player-bar"></div>
-            <div class="col right-player-bar"></div>
+            <div class="col left-player-bar">
+                <div class="album-miniature">
+                    <figure class="album-miniature-img"><img src="img/sinister.jpeg" alt=""></figure>
+                    <div class="album-miniature-txt">
+                        <h4>Sinister</h4>
+                        <span>Brano Nome</span>
+                    </div>
+                </div>
+                <div class="current-playing-utility">
+                    <a class="like-btn" href=""><i class="fa-regular fa-heart"></i></a>
+                    <a class="add-library-btn" href=""><i class="fa-regular fa-folder"></i></a>
+                </div>
+            </div>
+            <div class="col middle-player-bar">
+                <div class="player-commands">
+                    <button id="shuffle-btn"><i class="fa-solid fa-shuffle "></i></button>
+                    <button id="backward-btn"><i class="fa-solid fa-backward-step "></i></button>
+                    <button id="play-btn"><i class="fa-regular fa-circle-play "></i></button>
+                    <button id="forward-btn"><i class="fa-solid fa-forward-step "></i></button>
+                    <button id="loop-btn"><i class="fa-solid fa-arrow-rotate-right "></i></button>
+                </div>
+                <div class="current-playing-time">
+                    <div id="current-time">
+                        <span>0.25</span>
+                    </div>
+                    <div id="time-bar">
+                        <div id="time-played-bar"></div>
+                    </div>
+                    <div id="time-duration">
+                        <span>
+                            4.35
+
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col right-player-bar">
+
+            </div>
         </div>
     </footer>
 

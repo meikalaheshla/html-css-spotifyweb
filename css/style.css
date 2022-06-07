@@ -56,6 +56,13 @@ section {
     --profile-name-color: #ffffff;
     /* FOOTER */
     --footer-bg-color: #282828;
+    --leftbar-btn-color: #8e9094;
+    --leftbar-btn-hover-color: #baff32;
+    --time-bar-color: #8e9094;
+    --time-played-bar-color: #ffffff;
+    --time-played-bar-color-hover: #baff32;
+
+
 
 
 }
@@ -146,8 +153,9 @@ header .upgrade-button:hover {
     width: 250px;
     flex-shrink: 0;
     background-color: var(--sidebar-bg-color);
-    z-index: 1;
+    /* z-index: 1; */
     color: var(--sidebar-txt-color);
+    overflow: hidden;
 
 }
 
@@ -323,7 +331,7 @@ header .upgrade-button:hover {
 
 .section-selector .section-list {
     height: 60px;
-    width: 800px;
+    width: 50%;
     margin: auto;
     align-items: center;
     justify-content: space-between;
@@ -463,17 +471,127 @@ header .upgrade-button:hover {
 
 /* FOOTER */
 footer {
-    height: 80px;
+    height: 100px;
     background-color: var(--footer-bg-color);
+    padding: 10px 10px;
+
+
 }
 
 footer .player-bar {
+    width: 100%;
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-/* ELIMINAMI */
 footer .col {
-    width: 30%;
-    background-color: coral;
-    height: 80px;
+    width: calc(100%/3);
 }
+
+
+/* LEFT SIDE FOOTER */
+
+footer .left-player-bar {
+    /* background-color: #baff32; */
+    display: flex;
+    justify-content: flex-start;
+
+    padding-right: 15px;
+}
+
+
+footer .left-player-bar .album-miniature {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+footer .left-player-bar .current-playing-utility {
+
+    line-height: 60px;
+}
+
+footer .left-player-bar a {
+    color: var(--leftbar-btn-color);
+
+}
+
+footer .left-player-bar .add-library-btn {
+    margin-left: 10px;
+}
+
+footer .left-player-bar .album-miniature-img {
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+
+}
+
+footer .left-player-bar .album-miniature-txt {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+footer .album-miniature-txt span {
+    color: var(--item-subtitle-txt-color);
+    font-size: 0.7rem;
+
+}
+
+footer .left-player-bar img {
+    width: 100%
+}
+
+/* MIDDLE FOOTER */
+footer .middle-player-bar {}
+
+footer .middle-player-bar .player-commands {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 5px;
+
+
+}
+
+footer .middle-player-bar .player-commands button {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+
+}
+
+footer .middle-player-bar .player-commands #play-btn {
+    font-size: 30px;
+}
+
+footer .middle-player-bar .current-playing-time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+footer .middle-player-bar .current-playing-time #time-bar {
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: var(--time-bar-color);
+    height: 3px;
+    min-width: 50%;
+    flex-grow: 1;
+
+}
+
+footer .middle-player-bar .current-playing-time #time-played-bar {
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--time-played-bar-color);
+    width: 20%;
+}
+
+/* RIGHT SIDE FOOTER */
+footer .right-player-bar {}
