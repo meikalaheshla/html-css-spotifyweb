@@ -82,7 +82,7 @@ section {
     flex-wrap: wrap;
 }
 
-.xs-screen-hidden {}
+
 
 
 /* SPACING UTILITY */
@@ -165,6 +165,12 @@ header .upgrade-button:hover {
     line-height: 80px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+
+
+.sidebar #small-logo {
+    display: none;
 }
 
 
@@ -319,19 +325,19 @@ header .upgrade-button:hover {
 }
 
 /* SECTION SELECTOR BAR  */
-.section-selector {
-    /* ELIMINAMI */
-    /* height: 60px; */
-}
 
 .section-selector .section-list {
-    height: 60px;
+    min-height: 60px;
     width: 50%;
     margin: auto;
     align-items: center;
-    justify-content: space-between;
 }
 
+.section-selector .section-list-item {
+    text-align: center;
+    padding: 15px 5px;
+    width: calc(100% /6);
+}
 
 .section-selector a {
     font-weight: bold;
@@ -449,16 +455,13 @@ header .upgrade-button:hover {
 
 /* SPECIAL SECTION ITEM DETAILS */
 
-.main-container #most-popular-artist .album-img-frame {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
 
+.main-container #most-popular-artist .album-img-frame {
+    border-radius: 50%;
 }
 
 .main-container #most-popular-artist .album-img-frame .album-img {
-    width: 150px;
-    height: 150px;
+    border-radius: 50%;
     object-fit: cover;
 }
 
@@ -649,8 +652,81 @@ footer .right-player-bar #max-volume:hover #actual-volume {
 
 
 /* RESPONSIVNESS */
-@media screen and (max-width:992px) {}
+@media screen and (max-width:1200px) {
 
-@media screen and (max-width:768px) {}
+    /* SECTION SELECTOR */
+    .section-selector .section-list {
+        width: 80%;
+    }
 
-@media screen and (max-width:576px) {}
+    .section-selector .section-list-item {
+        width: calc(100% / 6);
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    /* SECTION SELECTOR */
+    .section-selector .section-list {
+        width: 100%;
+    }
+
+    .section-selector .section-list-item {
+        width: calc(100% / 5);
+    }
+
+    /* MAIN SECTIONS */
+    .main-container section .col {
+        width: calc(100%/4);
+    }
+
+    /* FOOTER */
+    footer .left-player-bar .current-playing-utility {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    /* SECTION SELECTOR */
+    .section-selector .section-list-item {
+        width: calc(100% / 3);
+    }
+
+    /* MAIN SECTIONS */
+    .main-container section .col {
+        width: calc(100%/2);
+    }
+}
+
+@media screen and (max-width:576px) {
+    .xs-screen-hidden {
+        display: none
+    }
+
+    .sidebar .logo #small-logo {
+        display: block;
+    }
+
+
+    /* SIDEBAR */
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar .logo {
+        width: 100%;
+        height: 50px;
+        line-height: 40px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .sidebar .logo img {
+        height: 100%;
+    }
+}
